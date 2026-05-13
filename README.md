@@ -1,4 +1,4 @@
-# 🧠 ML Gen Z Dashboard ⚡
+# 🧠 ML Acti. Pro. ⚡
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/nikhilsharma2146/ML-Acti.-Pro./master/logo.png" width="200" style="border-radius: 50%;">
