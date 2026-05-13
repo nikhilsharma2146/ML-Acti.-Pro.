@@ -79,7 +79,7 @@ st.markdown(f'''
 
 # ── Interactive Header Buttons ──
 st.markdown('<div class="header-btn-container">', unsafe_allow_html=True)
-c_main, c1, c2, c3, c4 = st.columns([2, 1, 1, 1, 1])
+c_main, c1, c2, c3, c4, c5 = st.columns([2, 1, 1, 1, 1, 1])
 
 with c_main:
     st.markdown('<div class="model-badge-container">', unsafe_allow_html=True)
@@ -99,6 +99,9 @@ with c3:
 with c4:
     if st.button(f"✂️ {test_size}% test"):
         st.toast("✂️ Train/Test split updated. Vibe check coming up! 💅")
+with c5:
+    if st.button("🔄 Refresh"):
+        st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)
 
 # ──────────────────── DATA GEN ────────────────────
