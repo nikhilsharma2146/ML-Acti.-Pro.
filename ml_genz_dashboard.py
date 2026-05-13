@@ -168,11 +168,18 @@ f1 = f1_score(y_test, y_pred, zero_division=0)
 # ──────────────────── METRICS ────────────────────
 st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
 st.markdown("## 🏆 Model Performance")
-m1, m2, m3, m4 = st.columns(4)
+m1, m2, m3, m4, m5 = st.columns(5)
 m1.metric("🎯 Accuracy", f"{acc:.2%}")
 m2.metric("🔬 Precision", f"{prec:.2%}")
 m3.metric("📡 Recall", f"{rec:.2%}")
 m4.metric("⚖️ F1 Score", f"{f1:.2%}")
+
+# Fun vibe rating
+if acc > 0.90: vibe = "Main Character 💅"
+elif acc > 0.80: vibe = "Serving ✨"
+elif acc > 0.70: vibe = "Mid 🌊"
+else: vibe = "Sus 🚨"
+m5.metric("✨ Vibe Rating", vibe)
 
 if acc > 0.90:
     st.success("🎉 Broo! 90%+ accuracy — model ne full send kar diya! 🚀🔥")
