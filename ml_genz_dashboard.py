@@ -24,6 +24,13 @@ apply_custom_styles()
 
 # ──────────────────── SIDEBAR ────────────────────
 with st.sidebar:
+    # ── LOGO ──
+    st.markdown('''
+    <div class="sidebar-logo-container">
+        <img src="https://raw.githubusercontent.com/nikhilsharma2146/ML-Acti.-Pro./master/logo.png" class="sidebar-logo">
+    </div>
+    ''', unsafe_allow_html=True)
+    
     st.markdown("<h2 style='text-align:center;'>🎮 Control Panel</h2>", unsafe_allow_html=True)
     st.markdown("---")
 

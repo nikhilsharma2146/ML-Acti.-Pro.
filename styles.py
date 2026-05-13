@@ -33,12 +33,32 @@ def apply_custom_styles():
     
     /* ── SIDEBAR ── */
     [data-testid="stSidebar"] { background: linear-gradient(180deg, #0a0a18 0%, #141428 50%, #1a1a2e 100%) !important;
-        border-right: 2px solid transparent; border-image: linear-gradient(180deg,#00ffe0,#ff6ec7,#a855f7) 1;
-        animation: border-glow 3s ease-in-out infinite; }
-    [data-testid="stSidebar"]::before { content:''; position:absolute; top:0; left:0; right:0; height:2px;
-        background:linear-gradient(90deg,transparent,#00ffe0,#ff6ec7,transparent); animation:shimmer 3s linear infinite; background-size:200% 100%; }
+        border-right: 1px solid #ffffff11; }
     [data-testid="stSidebar"] h1,[data-testid="stSidebar"] h2,[data-testid="stSidebar"] h3,
     [data-testid="stSidebar"] label,[data-testid="stSidebar"] p,[data-testid="stSidebar"] span { color: #e0e0e0 !important; }
+
+    .sidebar-logo-container {
+        text-align: center;
+        padding: 1.5rem 0;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .sidebar-logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px solid #00ffe044;
+        padding: 10px;
+        background: rgba(26, 26, 46, 0.6);
+        box-shadow: 0 0 30px #00ffe022, inset 0 0 20px #00ffe011;
+        animation: float 4s ease-in-out infinite, pulse-glow 3s ease-in-out infinite;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .sidebar-logo:hover {
+        transform: rotate(5deg) scale(1.1);
+        border-color: #00ffe088;
+        box-shadow: 0 0 50px #00ffe044;
+    }
     
     /* ── HEADINGS ── */
     h1,h2,h3,h4 { color: var(--accent) !important; text-shadow: 0 0 20px #00ffe044; animation: fade-slide-up 0.6s ease-out; }
