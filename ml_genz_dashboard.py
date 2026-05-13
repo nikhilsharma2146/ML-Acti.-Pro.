@@ -74,17 +74,32 @@ st.markdown(f'''
 <div class="glass-header">
     <p class="glow-title">🧠 ML Gen Z Dashboard ⚡</p>
     <p class="sub-title">Machine Learning seekho — apni style mein 🔥💅</p>
-    <div style="margin-top:12px;">
-        <span class="model-badge">🤖 {model_name}</span>
-    </div>
-    <div style="margin-top:8px;">
-        <span class="stat-pill">📦 {n_samples} samples</span>
-        <span class="stat-pill">🔢 {n_features} features</span>
-        <span class="stat-pill">🌀 {noise} noise</span>
-        <span class="stat-pill">✂️ {test_size}% test</span>
-    </div>
 </div>
 ''', unsafe_allow_html=True)
+
+# ── Interactive Header Buttons ──
+st.markdown('<div class="header-btn-container">', unsafe_allow_html=True)
+c_main, c1, c2, c3, c4 = st.columns([2, 1, 1, 1, 1])
+
+with c_main:
+    st.markdown('<div class="model-badge-container">', unsafe_allow_html=True)
+    if st.button(f"🤖 {model_name}"):
+        st.toast(f"🤖 {model_name} is active! Check out the use cases below. 🔥")
+    st.markdown('</div>', unsafe_allow_html=True)
+
+with c1:
+    if st.button(f"📦 {n_samples} samples"):
+        st.toast("📦 Dataset size updated! Fresh data vibes. ✨")
+with c2:
+    if st.button(f"🔢 {n_features} features"):
+        st.toast("🔢 More features = more complexity. Big brain time! 🧠")
+with c3:
+    if st.button(f"🌀 {noise} noise"):
+        st.toast("🌀 Noise level set. Stay focused! 🌊")
+with c4:
+    if st.button(f"✂️ {test_size}% test"):
+        st.toast("✂️ Train/Test split updated. Vibe check coming up! 💅")
+st.markdown('</div>', unsafe_allow_html=True)
 
 # ──────────────────── DATA GEN ────────────────────
 df, X, y = generate_data(n_samples, n_features, noise)

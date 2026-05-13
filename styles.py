@@ -133,6 +133,46 @@ def apply_custom_styles():
         border-radius:50px; padding:4px 14px; margin:2px; font-size:0.8rem; color:#00ffe0;
         animation:fade-slide-up 0.5s ease-out; transition:all 0.3s; }
     .stat-pill:hover { background:rgba(0,255,224,0.15); border-color:#00ffe066; }
+
+    /* ── INTERACTIVE HEADER BUTTONS ── */
+    .header-btn-container { text-align: center; margin-top: -50px; margin-bottom: 2rem; }
+    .header-btn-container div[data-testid="stHorizontalBlock"] { justify-content: center; gap: 0.5rem; }
+
+    /* Target the Streamlit button inside the container */
+    .header-btn-container button {
+        background: rgba(0,255,224,0.05) !important;
+        border: 1px solid rgba(0,255,224,0.2) !important;
+        border-radius: 50px !important;
+        color: #00ffe0 !important;
+        font-size: 0.8rem !important;
+        padding: 4px 16px !important;
+        min-height: unset !important;
+        height: auto !important;
+        line-height: 1.5 !important;
+        transition: all 0.3s ease !important;
+    }
+    .header-btn-container button:hover {
+        background: rgba(0,255,224,0.15) !important;
+        border-color: rgba(0,255,224,0.6) !important;
+        box-shadow: 0 0 15px rgba(0,255,224,0.3) !important;
+        transform: translateY(-2px) !important;
+    }
+
+    /* Specific style for the model badge button */
+    .model-badge-container button {
+        background: linear-gradient(135deg, #00ffe0, #00b4d8) !important;
+        color: #0f0f1a !important;
+        font-weight: 700 !important;
+        font-size: 0.9rem !important;
+        padding: 8px 24px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
+        box-shadow: 0 0 15px rgba(0,255,224,0.2) !important;
+    }
+    .model-badge-container button:hover {
+        box-shadow: 0 0 25px rgba(0,255,224,0.5) !important;
+        transform: translateY(-3px) scale(1.02) !important;
+    }
     </style>
     """, unsafe_allow_html=True)
     
